@@ -139,13 +139,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GraphX.h" />
+    <ClInclude Include="stdafx.h" />
     <ClInclude Include="XApplication.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="GraphX_Welcome.bmp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\..\..\..\..\Documents\Visual Studio 2015\Templates\ProjectTemplates\GraphX framework application.zip" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -26,6 +26,9 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
     <ClInclude Include="GraphX.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
@@ -37,8 +40,5 @@
     <Image Include="GraphX_Welcome.bmp">
       <Filter>Файлы ресурсов</Filter>
     </Image>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\..\..\..\..\Documents\Visual Studio 2015\Templates\ProjectTemplates\GraphX framework application.zip" />
   </ItemGroup>
 </Project>
