@@ -1,0 +1,8 @@
+Plan for current version 
+
+VERSION: dev 0.1
+
+- Create error structures +
+- Create virtual methods for handle input +
+- Create color enumerations
+- Define more draw methods (shapes ...)

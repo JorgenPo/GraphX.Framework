@@ -2,6 +2,8 @@
 #define XAPPLICATION
 #include "GraphX.h"
 
+using namespace GraphX::Core;
+
 class XApplication : public GraphXApp
 {
 public:
@@ -19,7 +21,9 @@ public:
 protected:
 
 private:
+	SDL_Texture *welcome;
 	//Here is your properties
+
 };
 
 #endif

@@ -1,10 +1,10 @@
 #include "XApplication.h"
 
 
-
 XApplication::XApplication()
 	:GraphXApp()
 {
+	welcome = nullptr;
 	// Move all loading stuff in Init() function
 	// Here are some other init... :)
 }
@@ -13,12 +13,14 @@ XApplication::XApplication()
 XApplication::~XApplication()
 {
 	// Release resources
+	SDL_DestroyTexture(welcome);
 }
 
 int XApplication::Run()
 {
 	this->Init();
-	while (true) {
+	while (!quit) {
+		this->Control();
 		this->Update();
 		this->Draw();
 	}
@@ -28,11 +30,8 @@ int XApplication::Run()
 
 void XApplication::Init()
 {
-	SDL_Texture *welcome = LoadTexture("GraphX_Welcome.bmp");
-	if (welcome != nullptr) {
-		RenderTexture(welcome, true);
-	}
-	SDL_DestroyTexture(welcome);
+	/*Welcome texture. Delete it, if you don't need it:)*/
+	welcome = LoadTexture("GraphX_Welcome.bmp");
 
 	// Init logic here. There are only one-time initialization
 	//per-frame initialization must be moved to Update() function
@@ -40,10 +39,15 @@ void XApplication::Init()
 
 void XApplication::Update()
 {
-	//Per-frame update 
+	// Per-frame update 
 }
 
 void XApplication::Draw()
 {
-	//Per-frame draw
+	ClearScreen();
+	
+	//Draw here! :)
+	DrawTexture(welcome); /*Delete it*/
+
+	UpdateScreen();
 }

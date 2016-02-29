@@ -15,21 +15,27 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="..\GraphXCore\GraphX.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
-    <ClCompile Include="GraphX.cpp">
+    <ClCompile Include="..\GraphXCore\XApplication.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
-    <ClCompile Include="XApplication.cpp">
+    <ClCompile Include="..\GraphXCore\main.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GraphXCore\XError.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="GraphX.h">
+    <ClInclude Include="..\GraphXCore\GraphX.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
-    <ClInclude Include="XApplication.h">
+    <ClInclude Include="..\GraphXCore\XApplication.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GraphXCore\XError.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
   </ItemGroup>
@@ -39,6 +45,6 @@
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\..\..\..\Documents\Visual Studio 2015\Templates\ProjectTemplates\GraphX framework application.zip" />
+    <Text Include="version.txt" />
   </ItemGroup>
 </Project>
