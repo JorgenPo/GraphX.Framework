@@ -22,11 +22,13 @@
     <ClCompile Include="..\GraphXCore\GraphX.cpp" />
     <ClCompile Include="..\GraphXCore\main.cpp" />
     <ClCompile Include="..\GraphXCore\XApplication.cpp" />
+    <ClCompile Include="..\GraphXCore\XColor.cpp" />
     <ClCompile Include="..\GraphXCore\XError.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\GraphXCore\GraphX.h" />
     <ClInclude Include="..\GraphXCore\XApplication.h" />
+    <ClInclude Include="..\GraphXCore\XColor.h" />
     <ClInclude Include="..\GraphXCore\XError.h" />
   </ItemGroup>
   <ItemGroup>

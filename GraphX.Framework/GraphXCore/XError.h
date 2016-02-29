@@ -2,6 +2,7 @@
 #define XERROR_H
 
 #include <string>
+#include "GraphX.h"
 
 namespace GraphX {
 	namespace Error {
