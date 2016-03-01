@@ -11,7 +11,7 @@ namespace GraphX {
 
 		GraphXApp::GraphXApp(const char * title, size_t width,
 			size_t height, SDL_WindowFlags flags)
-			: mWidth(width), mHeight(height), quit(false)
+			: mWidth(width), mHeight(height), quit(false), mBrush(XColor::BLACK)
 		{
 			if (SDL_Init(SDL_INIT_VIDEO) != 0) {
 				throw Error::InitError(SDL_GetError());
@@ -39,6 +39,11 @@ namespace GraphX {
 			SDL_DestroyWindow(mWindow);
 			SDL_DestroyRenderer(mRender);
 			SDL_Quit();
+		}
+
+		void GraphXApp::SetDrawingColor(XColor::Color color)
+		{
+			mBrush = XColor(color);
 		}
 
 		void GraphXApp::Control()
@@ -85,14 +90,43 @@ namespace GraphX {
 			quit = true;
 		}
 
-		void GraphXApp::DrawPoint(int x, int y, SDL_Color color)
+		void GraphXApp::DrawPoint(int x, int y)
 		{
+			SDL_Color color = mBrush.getSDLColor();
 			SDL_SetRenderDrawColor(mRender, color.r, color.g, color.b, color.a);
 			SDL_RenderDrawPoint(mRender, x, y);
 		}
 
-		void GraphXApp::ClearScreen(SDL_Color color)
+		void GraphXApp::DrawLine(int startX, int startY, int endX, int endY)
 		{
+			SDL_Color color = mBrush.getSDLColor();
+			SDL_SetRenderDrawColor(mRender, color.r, color.g, color.b, color.a);
+			SDL_RenderDrawLine(mRender, startX, startY, endX, endY);
+		}
+
+		void GraphXApp::DrawCircle(int centerX, int centerY, int r)
+		{
+			SDL_Color color = mBrush.getSDLColor();
+			SDL_SetRenderDrawColor(mRender, color.r, color.g, color.b, color.a);
+
+			int y = 0;
+			int x = 0;
+			for (double t = 0; t < 2 * M_PI; t+=0.01) {
+				x = centerX + (int)(cos(t) * r);
+				y = centerY + (int)(sin(t) * r);
+				SDL_RenderDrawPoint(mRender, x, y);
+			}
+		}
+
+		void GraphXApp::DrawSquare(SDL_Rect rectangle)
+		{
+			SDL_Color color = mBrush.getSDLColor();
+			SDL_SetRenderDrawColor(mRender, color.r, color.g, color.b, color.a);
+		}
+
+		void GraphXApp::ClearScreen()
+		{
+			SDL_Color color = mBrush.getSDLColor();
 			SDL_SetRenderDrawColor(mRender, color.r, color.g, color.b, color.a);
 			SDL_RenderClear(mRender);
 		}

@@ -4,13 +4,12 @@
 #include <SDL.h>
 #include <string>
 #include "XError.h"
+#include "XColor.h"
 
 namespace GraphX {
 	namespace Core {
 		class GraphXApp
 		{
-		public:
-			// Dont touch it ;)
 		public:
 			static void Release(void* object);
 
@@ -20,7 +19,7 @@ namespace GraphX {
 			~GraphXApp();
 
 			// Virtual methods
-			virtual int Run() = 0;
+			virtual int  Run() = 0;
 			virtual void Init() = 0;
 			virtual void Update() = 0;
 			virtual void Draw() = 0;
@@ -33,10 +32,14 @@ namespace GraphX {
 			virtual void onExit();
 
 			// Drawing methods
-			void DrawPoint(int x, int y, SDL_Color color);
-
+			void DrawPoint(int x, int y);
+			void DrawLine(int startX, int startY, int endX, int endY);
+			void DrawCircle(int centerX, int centerY, int r);
+			void DrawSquare(SDL_Rect rectangle);
+			//void DrawTriangle(); /*Maybe this method is useless?*/
+			
 			// Screen manipulations
-			void ClearScreen(SDL_Color color = SDL_Color());
+			void ClearScreen();
 			void UpdateScreen();
 
 			// Texture methods
@@ -47,9 +50,11 @@ namespace GraphX {
 			void DrawTexture(SDL_Texture *texture, bool updateScreen = true);
 
 			// Get methods
-			SDL_Window*			getWindow() { return mWindow; }
-			SDL_Renderer*		getRenderer() { return mRender; }
+			SDL_Window*			GetWindow() { return mWindow; }
+			SDL_Renderer*		GetRenderer() { return mRender; }
 
+			// Set methods
+			void				SetDrawingColor(XColor::Color color);
 		protected/*methods*/:
 			void Control();
 
@@ -59,6 +64,7 @@ namespace GraphX {
 			SDL_Renderer *mRender;
 			SDL_Event	mEvent;
 
+			XColor		mBrush;
 			size_t mWidth, mHeight;
 		};
 	}

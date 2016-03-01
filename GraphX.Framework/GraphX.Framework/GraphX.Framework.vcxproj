@@ -19,23 +19,19 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\GraphXCore\GraphX.cpp" />
-    <ClCompile Include="..\GraphXCore\main.cpp" />
-    <ClCompile Include="..\GraphXCore\XApplication.cpp" />
-    <ClCompile Include="..\GraphXCore\XColor.cpp" />
-    <ClCompile Include="..\GraphXCore\XError.cpp" />
+    <ClCompile Include="GraphXCore\GraphX.cpp" />
+    <ClCompile Include="GraphXCore\main.cpp" />
+    <ClCompile Include="GraphXCore\XApplication.cpp" />
+    <ClCompile Include="GraphXCore\XColor.cpp" />
+    <ClCompile Include="GraphXCore\XError.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\GraphXCore\GraphX.h" />
-    <ClInclude Include="..\GraphXCore\XApplication.h" />
-    <ClInclude Include="..\GraphXCore\XColor.h" />
-    <ClInclude Include="..\GraphXCore\XError.h" />
+    <ClInclude Include="GraphXCore\GraphX.h" />
+    <ClInclude Include="GraphXCore\XApplication.h" />
+    <ClInclude Include="GraphXCore\XError.h" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="GraphX_Welcome.bmp" />
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="version.txt" />
+    <Image Include="GraphXRes\GraphX_Welcome.bmp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{836E8E08-8A09-4046-A6C0-507807794D48}</ProjectGuid>
@@ -88,14 +84,14 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>E:\SDL\SDL2-2.0.4\include;$(IncludePath);</IncludePath>
     <ReferencePath>$(ReferencePath)</ReferencePath>
     <LibraryPath>E:\SDL\SDL2-2.0.4\lib\x86;$(LibraryPath)</LibraryPath>
+    <IncludePath>E:\SDL\SDL2-2.0.4\include;$(IncludePath);</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>E:\SDL\SDL2-2.0.4\include;$(IncludePath);</IncludePath>
     <ReferencePath>$(ReferencePath)</ReferencePath>
     <LibraryPath>E:\SDL\SDL2-2.0.4\lib\x86;$(LibraryPath)</LibraryPath>
+    <IncludePath>E:\SDL\SDL2-2.0.4\include;$(IncludePath);</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <IncludePath>E:\SDL\SDL2-2.0.4\include;$(IncludePath)</IncludePath>

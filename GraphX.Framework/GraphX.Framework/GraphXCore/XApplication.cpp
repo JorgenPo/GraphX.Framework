@@ -31,7 +31,7 @@ int XApplication::Run()
 void XApplication::Init()
 {
 	/*Welcome texture. Delete it, if you don't need it:)*/
-	welcome = LoadTexture("GraphX_Welcome.bmp");
+	welcome = LoadTexture("GraphXRes/GraphX_Welcome.bmp");
 
 	// Init logic here. There are only one-time initialization
 	//per-frame initialization must be moved to Update() function
@@ -44,6 +44,7 @@ void XApplication::Update()
 
 void XApplication::Draw()
 {
+	SetDrawingColor(XColor::BLACK);
 	ClearScreen();
 	
 	//Draw here! :)

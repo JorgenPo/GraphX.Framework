@@ -1,7 +1,6 @@
 Plan for current version 
 
-VERSION: dev 0.01
-
+VERSION: dev 0.0
 - Create error structures +
 - Create virtual methods for handle input +
 - Create color enumerations +

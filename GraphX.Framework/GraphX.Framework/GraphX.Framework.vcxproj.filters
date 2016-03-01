@@ -15,42 +15,36 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\GraphXCore\GraphX.cpp">
+    <ClCompile Include="GraphXCore\GraphX.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
-    <ClCompile Include="..\GraphXCore\XApplication.cpp">
+    <ClCompile Include="GraphXCore\main.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
-    <ClCompile Include="..\GraphXCore\main.cpp">
+    <ClCompile Include="GraphXCore\XError.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
-    <ClCompile Include="..\GraphXCore\XError.cpp">
+    <ClCompile Include="GraphXCore\XApplication.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
-    <ClCompile Include="..\GraphXCore\XColor.cpp">
+    <ClCompile Include="GraphXCore\XColor.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\GraphXCore\GraphX.h">
+    <ClInclude Include="GraphXCore\GraphX.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
-    <ClInclude Include="..\GraphXCore\XApplication.h">
+    <ClInclude Include="GraphXCore\XError.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
-    <ClInclude Include="..\GraphXCore\XError.h">
-      <Filter>Заголовочные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="..\GraphXCore\XColor.h">
+    <ClInclude Include="GraphXCore\XApplication.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="GraphX_Welcome.bmp">
+    <Image Include="GraphXRes\GraphX_Welcome.bmp">
       <Filter>Файлы ресурсов</Filter>
     </Image>
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="version.txt" />
   </ItemGroup>
 </Project>

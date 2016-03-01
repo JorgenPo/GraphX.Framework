@@ -1,7 +1,9 @@
-#ifndef XAPPLICATION
-#define XAPPLICATION
+#ifndef XAPPLICATION_H
+#define XAPPLICATION_H
 #include "GraphX.h"
+#include "XColor.h"
 
+using namespace GraphX;
 using namespace GraphX::Core;
 
 class XApplication : public GraphXApp
